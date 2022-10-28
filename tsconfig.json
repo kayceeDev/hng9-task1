@@ -1,0 +1,17 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "noUnusedLocals": true,
+    "typeRoots": ["src/types", "node_modules/@types"],
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["tsconfig.json"],
+    "tsconfigRootDir": "__dirname",
+    "sourceType": "module"
+  },
+  "compileOnSave": true,
+  "include": ["src"],
+  "exclude": ["node_modules", "./dist"]
+}
