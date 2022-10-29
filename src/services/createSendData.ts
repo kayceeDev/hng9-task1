@@ -7,9 +7,5 @@ export const createSendData = (
   message: string,
   res: Response
 ) => {
-  return res.status(200).json({
-    status,
-    message,
-    data,
-  });
+  return res.status(200).json(data);
 };

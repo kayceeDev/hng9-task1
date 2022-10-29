@@ -20,6 +20,7 @@ app.use((0, morgan_1.default)("dev"));
 const routes_1 = require("./routes");
 const port = process.env.PORT || 3000;
 app.use("/api/v1", routes_1.Routers.homeRouter);
+app.use('/', routes_1.Routers.baseRouter);
 app.listen(port, () => {
     return console.log(`Express is listening at port ${port}`);
 });

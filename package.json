@@ -2,8 +2,10 @@
   "name": "task1",
   "main": "dist/app.js",
   "scripts": {
-    "start": "tsc && node dist/app.js",
+    "start": "node dist/app.js",
     "start:nodemon": "./node_modules/nodemon/bin/nodemon.js",
+    "dev": "ts-node ./src/app.ts",
+    "build":"tsc",
     "deploy": "git add . && git commit -m Heroku && git push heroku main",
     "lint": "eslint . --fix"
   },
