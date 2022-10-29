@@ -1,4 +1,4 @@
-import express, { Request, Response } from "express";
+import express from "express";
 import "dotenv/config";
 import cors from "cors";
 import helmet from "helmet";
@@ -14,12 +14,11 @@ app.use(cors());
 app.use(helmet());
 app.use(xss());
 app.use(morgan("dev"));
+import {Routers} from "./routes"
 
 const port = 3000;
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello World!");
-});
+app.use("/api/v1", Routers.homeRouter);
 
 app.listen(port, () => {
   return console.log(`Express is listening at http://localhost:${port}`);
