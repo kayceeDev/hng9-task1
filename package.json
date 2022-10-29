@@ -2,7 +2,7 @@
   "name": "task1",
   "scripts": {
     "dev": "ts-node ./src/app.ts",
-    "start:prod": "tsc && node ./dist/src/app.js",
+    "start:prod": " tsc && node ./dist/app.js",
     "start:nodemon": "./node_modules/nodemon/bin/nodemon.js",
     "lint": "eslint . --fix"
   },

@@ -16,11 +16,10 @@ app.use(express_1.default.urlencoded({ extended: true }));
 app.use((0, cors_1.default)());
 app.use((0, helmet_1.default)());
 app.use((0, xss_clean_1.default)());
-app.use((0, morgan_1.default)('dev'));
+app.use((0, morgan_1.default)("dev"));
+const routes_1 = require("./routes");
 const port = 3000;
-app.get("/", (req, res) => {
-    res.send("Hello World!");
-});
+app.use("/api/v1", routes_1.Routers.homeRouter);
 app.listen(port, () => {
     return console.log(`Express is listening at http://localhost:${port}`);
 });
