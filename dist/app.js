@@ -18,8 +18,8 @@ app.use((0, helmet_1.default)());
 app.use((0, xss_clean_1.default)());
 app.use((0, morgan_1.default)("dev"));
 const routes_1 = require("./routes");
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.use("/api/v1", routes_1.Routers.homeRouter);
 app.listen(port, () => {
-    return console.log(`Express is listening at http://localhost:${port}`);
+    return console.log(`Express is listening at port ${port}`);
 });

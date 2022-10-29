@@ -2,10 +2,9 @@
   "name": "task1",
   "main": "dist/app.js",
   "scripts": {
-    "start": "node dist/app.js",
-    "postinstall": "tsc",
-    "dev": "tsc && node src/app.js",
+    "start": "tsc && node dist/app.js",
     "start:nodemon": "./node_modules/nodemon/bin/nodemon.js",
+    "deploy": "git add . && git commit -m Heroku && git push heroku main",
     "lint": "eslint . --fix"
   },
   "devDependencies": {

@@ -16,10 +16,10 @@ app.use(xss());
 app.use(morgan("dev"));
 import {Routers} from "./routes"
 
-const port = 3000;
+const port: string | number = process.env.PORT || 3000;
 
 app.use("/api/v1", Routers.homeRouter);
 
 app.listen(port, () => {
-  return console.log(`Express is listening at http://localhost:${port}`);
+  return console.log(`Express is listening at port ${port}`);
 });
