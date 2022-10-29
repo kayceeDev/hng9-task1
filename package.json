@@ -1,8 +1,10 @@
 {
   "name": "task1",
+  "main": "dist/app.js",
   "scripts": {
-    "dev": "ts-node ./src/app.ts",
-    "start:prod": "tsc && node ./dist/app.js",
+    "start": "node dist/app.js",
+    "postinstall": "tsc",
+    "dev": "tsc && node src/app.js",
     "start:nodemon": "./node_modules/nodemon/bin/nodemon.js",
     "lint": "eslint . --fix"
   },
@@ -30,6 +32,13 @@
     "helmet": "^6.0.0",
     "morgan": "^1.10.0",
     "xss-clean": "^0.1.1"
+  },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
+  "engines": {
+    "node": "16.x"
   },
   "license": "ISC",
   "packageManager": "yarn@3.2.4"
