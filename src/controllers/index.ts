@@ -15,6 +15,19 @@ const home = expressAsyncHandler(async (req:Request, res:Response, next:NextFunc
     return;
 })
 
+const userOperation = expressAsyncHandler(async (req:Request,res:Response,next:NextFunction):Promise<void> => {
+    let {operation_type, x,y }=  req.body
+    operation_type = typeof req.userOperation.operation_type 
+    switch (operation_type string) {
+        case "addition":
+            
+            break;
+    
+        default:
+            break;
+    }
+})
+
 export const controllers = {
     home
 }
