@@ -21,7 +21,7 @@ export enum OperationType {
 export interface OperationData  {
   slackUsername:string;
   result?:number;
-  operation_type:keyof OperationType;
+  operation_type:string;
 }
 
 
