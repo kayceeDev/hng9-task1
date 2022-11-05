@@ -1,4 +1,3 @@
-import { Request } from "express";
 
 export interface UserDetails<T> {
   data : T
