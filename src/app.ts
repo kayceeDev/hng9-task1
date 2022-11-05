@@ -20,7 +20,7 @@ const port: string | number = process.env.PORT || 3000;
 
 app.use("/api/v1", Routers.homeRouter);
 app.use('/', Routers.baseRouter);
-app.use("//api/v1/operation", Routers.operation)
+app.use("/api/v1/operation", Routers.operation)
 
 app.listen(port, () => {
   return console.log(`Express is listening at port ${port}`);
