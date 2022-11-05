@@ -11,14 +11,23 @@ export type UserType = {
   bio: string;
 }
 
-export enum OperationType  {
-  Add = "ADDITION",
-  Sub = "SUBTRACTION",
-  Mul = "MULTIPLY"
+
+export enum OperationType {
+    Addition = "ADDITION",
+    Sub = "SUBTRACTION",
+    Mul = "MULTIPLY",
+    ADDITION = "ADDITION"
 }
 
+export interface OperationData  {
+  slackUsername:string;
+  result?:number;
+  operation_type:keyof OperationType;
+}
+
+
 export interface UserOperation{
-  operation_type:OperationType;
+  operation_type: OperationType;
   x:number;
   y:number
 }
